@@ -314,6 +314,8 @@
     color:var(--text-muted);
     margin:0;
   }
+  .hint a{color:var(--text-2);text-decoration:underline;text-underline-offset:3px;}
+  .hint a:hover{color:var(--accent-strong);}
   .project-link{
     align-self:center;
     font-family:var(--font-mono);
@@ -341,7 +343,7 @@
   .stack{padding:64px 0;border-top:1px solid var(--border);}
   .stack-groups{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:32px;
   }
   .stack-group h4{
@@ -488,7 +490,7 @@
           <pre class="code-body"><code>{
   <span class="k">"nome"</span><span class="punc">:</span> <span class="s">"Gustavo De Mello"</span><span class="punc">,</span>
   <span class="k">"cargo"</span><span class="punc">:</span> <span class="s">"Backend Developer"</span><span class="punc">,</span>
-  <span class="k">"stack_principal"</span><span class="punc">:</span> <span class="punc">[</span><span class="s">"Node.js"</span><span class="punc">,</span> <span class="s">"Express"</span><span class="punc">,</span> <span class="s">"PostgreSQL"</span><span class="punc">]</span><span class="punc">,</span>
+  <span class="k">"stack_principal"</span><span class="punc">:</span> <span class="punc">[</span><span class="s">"Node.js"</span><span class="punc">,</span> <span class="s">"Python"</span><span class="punc">,</span> <span class="s">"PostgreSQL"</span><span class="punc">]</span><span class="punc">,</span>
   <span class="k">"localização"</span><span class="punc">:</span> <span class="s">"Brasil"</span><span class="punc">,</span>
   <span class="k">"status"</span><span class="punc">:</span> <span class="s stat">"disponível para novos projetos"</span>
 <span class="punc">}</span><span class="cursor"></span></code></pre>
@@ -520,10 +522,60 @@
               <span class="tag">PostgreSQL</span>
               <span class="tag">Handlebars</span>
               <span class="tag">Google Calendar API</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Google Cloud Run</span>
             </div>
-            <p class="hint">Deploy no Render (free tier) — o primeiro acesso pode levar alguns segundos.</p>
+            <p class="hint">Rodando no Google Cloud Run. Também disponível em <a href="https://barbearia.gustavomello.shop/" target="_blank" rel="noopener">barbearia.gustavomello.shop</a> (Render).</p>
           </div>
-          <a class="project-link" href="https://barbearia-agendamento-nuc3.onrender.com/consultar" target="_blank" rel="noopener">Acessar sistema ↗</a>
+          <a class="project-link" href="https://barbeariabase.online/" target="_blank" rel="noopener">Acessar sistema ↗</a>
+        </article>
+
+        <article class="project-row">
+          <div class="project-status">
+            <span class="status-dot"></span>online
+          </div>
+          <div class="project-main">
+            <p class="project-route"><span style="color:var(--accent);">GET</span> /projetos/pdv-restaurante <span class="status-code">200 OK</span></p>
+            <h3>PDV Restaurante — Ponto de Venda</h3>
+            <p class="desc">Sistema completo de PDV para restaurantes, com acesso por login.</p>
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://pdv.gustavomello.shop/login" target="_blank" rel="noopener">Acessar sistema ↗</a>
+        </article>
+
+        <article class="project-row">
+          <div class="project-status">
+            <span class="status-dot"></span>online
+          </div>
+          <div class="project-main">
+            <p class="project-route"><span style="color:var(--accent);">GET</span> /projetos/pixbarber <span class="status-code">200 OK</span></p>
+            <h3>PixBarber — Pagamento via Pix</h3>
+            <p class="desc">Pagamento rápido via Pix para barbearias: o cliente escolhe o serviço e recebe o QR Code Pix na hora, com opção de Pix Copia e Cola.</p>
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://pixbarber.gustavomello.shop/" target="_blank" rel="noopener">Testar pagamento ↗</a>
+        </article>
+
+        <article class="project-row">
+          <div class="project-status">
+            <span class="status-dot"></span>online
+          </div>
+          <div class="project-main">
+            <p class="project-route"><span style="color:var(--accent);">GET</span> /projetos/tecnologias <span class="status-code">200 OK</span></p>
+            <h3>TechCatalog — Catálogo de Tecnologias</h3>
+            <p class="desc">Sistema para cadastrar as tecnologias que você usa, com a linguagem base de cada uma e o tempo de aprendizado.</p>
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Vercel</span>
+            </div>
+          </div>
+          <a class="project-link" href="https://tecnologias.gustavomello.shop/" target="_blank" rel="noopener">Abrir sistema ↗</a>
         </article>
 
         <article class="project-row">
@@ -538,6 +590,7 @@
               <span class="tag">JavaScript</span>
               <span class="tag">Geração de PDF</span>
               <span class="tag">Geração de imagem</span>
+              <span class="tag">Vercel</span>
             </div>
           </div>
           <a class="project-link" href="https://sistema-basico-orcamentos.vercel.app/" target="_blank" rel="noopener">Abrir calculadora ↗</a>
@@ -557,27 +610,44 @@
       </div>
       <div class="stack-groups">
         <div class="stack-group">
-          <h4>Linguagem &amp; backend</h4>
+          <h4>Linguagens</h4>
           <ul>
             <li>JavaScript</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="stack-group">
+          <h4>Back-end &amp; front-end</h4>
+          <ul>
             <li>Node.js</li>
             <li>Express</li>
             <li>Handlebars</li>
+            <li>React</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
           </ul>
         </div>
         <div class="stack-group">
           <h4>Dados &amp; integrações</h4>
           <ul>
             <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>Supabase</li>
             <li>Google Calendar API</li>
           </ul>
         </div>
         <div class="stack-group">
-          <h4>Deploy &amp; versionamento</h4>
+          <h4>Infra &amp; deploy</h4>
           <ul>
-            <li>Git &amp; GitHub</li>
-            <li>Render</li>
+            <li>AWS</li>
+            <li>Google Cloud Run</li>
             <li>Vercel</li>
+            <li>Render</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Git &amp; GitHub</li>
           </ul>
         </div>
       </div>
